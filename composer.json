@@ -1,0 +1,46 @@
+{
+    "name": "martinsoenen/pulse-mcp",
+    "description": "Laravel Pulse cards for the tool calls served by a laravel/mcp server.",
+    "keywords": [
+        "laravel",
+        "pulse",
+        "mcp",
+        "model-context-protocol",
+        "monitoring"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Martin Soenen"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "laravel/mcp": "^1.0",
+        "laravel/pulse": "^1.8",
+        "livewire/livewire": "^3.8.3|^4.3.4"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^10.8|^11.0",
+        "phpunit/phpunit": "^11.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "MartinSoenen\\PulseMcp\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MartinSoenen\\PulseMcp\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MartinSoenen\\PulseMcp\\PulseMcpServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
