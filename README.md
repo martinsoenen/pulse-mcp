@@ -5,6 +5,37 @@ Laravel Pulse cards for the tool calls served by a [`laravel/mcp`](https://githu
 Pulse already shows you the HTTP request that carried an MCP call, but it aggregates it by route: every tool call
 collapses into a single `POST /mcp` row. This package breaks that row apart, per tool.
 
+## The cards
+
+### MCP Usage
+
+The users calling the most tools, or experiencing the slowest ones, like Pulse's own Application Usage card.
+
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/martinsoenen/pulse-mcp/main/art/usage-dark.png">
+    <img src="https://raw.githubusercontent.com/martinsoenen/pulse-mcp/main/art/usage-light.png" alt="The MCP Usage card, ranking the users by the number of tools they called" width="416">
+</picture>
+
+### Slow MCP Tools
+
+The tools that reached the slow threshold, sorted by their slowest call or by how often they were slow.
+
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/martinsoenen/pulse-mcp/main/art/slow-tools-dark.png">
+    <img src="https://raw.githubusercontent.com/martinsoenen/pulse-mcp/main/art/slow-tools-light.png" alt="The Slow MCP Tools card, listing the tools over the threshold with their count and slowest call" width="416">
+</picture>
+
+The threshold was lowered to 10 ms for this screenshot.
+
+### MCP Tool Usage
+
+Every tool, with how many times it was called and how many of those calls failed.
+
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/martinsoenen/pulse-mcp/main/art/tool-usage-dark.png">
+    <img src="https://raw.githubusercontent.com/martinsoenen/pulse-mcp/main/art/tool-usage-light.png" alt="The MCP Tool Usage card, listing each tool with its calls and errors" width="416">
+</picture>
+
 ## What it records
 
 | Type | Key | Value |
